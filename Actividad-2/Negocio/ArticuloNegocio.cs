@@ -9,6 +9,9 @@ namespace Negocio
 {
     public class ArticuloNegocio
     {
-        public List<Articulo>
+        public List<Articulo> listar()
+        {
+
+        }
     }
 }
