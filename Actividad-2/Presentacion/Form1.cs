@@ -49,17 +49,31 @@ namespace Presentacion
 
         private void cargarGrilla()
         {
-            ArticuloNegocio art = new List<Pokemon>();
-            AccesoDatos datos = new AccesoDatos();
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+           
             try
             {
+                listaArticulos = articuloNegocio.listar();
+                dgvArticulos.DataSource = listaArticulos;
 
+                RecargarImg(listaArticulos[0].UrlImagen);
             }
             catch (Exception ex)
             {
 
-                throw ex;
+                MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void RecargarImg(string img)
+        {
+            pbxArticulo.Load(img);
+        }
+
+        private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            RecargarImg(seleccionado.UrlImagen);
         }
     }
 }
