@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dominio;
+using Negocio;
 
 namespace Presentacion
 {
     public partial class Form1 : Form
     {
+        private List<Articulo> listaArticulos;
+
         public Form1()
         {
             InitializeComponent();
@@ -36,6 +40,26 @@ namespace Presentacion
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cargarGrilla();
+        }
+
+        private void cargarGrilla()
+        {
+            ArticuloNegocio art = new List<Pokemon>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

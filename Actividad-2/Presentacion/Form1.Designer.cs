@@ -32,20 +32,20 @@ namespace Presentacion
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.txtBFiltrar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgbArticulos = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFiltrar
             // 
             this.lblFiltrar.AutoSize = true;
-            this.lblFiltrar.Location = new System.Drawing.Point(48, 30);
+            this.lblFiltrar.Location = new System.Drawing.Point(9, 36);
             this.lblFiltrar.Name = "lblFiltrar";
             this.lblFiltrar.Size = new System.Drawing.Size(32, 13);
             this.lblFiltrar.TabIndex = 0;
@@ -53,31 +53,31 @@ namespace Presentacion
             // 
             // txtBFiltrar
             // 
-            this.txtBFiltrar.Location = new System.Drawing.Point(113, 30);
+            this.txtBFiltrar.Location = new System.Drawing.Point(47, 33);
             this.txtBFiltrar.Name = "txtBFiltrar";
-            this.txtBFiltrar.Size = new System.Drawing.Size(100, 20);
+            this.txtBFiltrar.Size = new System.Drawing.Size(463, 20);
             this.txtBFiltrar.TabIndex = 1;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(289, 30);
+            this.btnBuscar.Location = new System.Drawing.Point(540, 31);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgbArticulos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(51, 78);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 3;
+            this.dgbArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbArticulos.Location = new System.Drawing.Point(12, 76);
+            this.dgbArticulos.Name = "dgbArticulos";
+            this.dgbArticulos.Size = new System.Drawing.Size(498, 287);
+            this.dgbArticulos.TabIndex = 3;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(438, 214);
+            this.btnAgregar.Location = new System.Drawing.Point(159, 390);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 4;
@@ -87,7 +87,7 @@ namespace Presentacion
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(588, 214);
+            this.btnModificar.Location = new System.Drawing.Point(309, 390);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 5;
@@ -97,7 +97,7 @@ namespace Presentacion
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(513, 214);
+            this.btnEliminar.Location = new System.Drawing.Point(234, 390);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 6;
@@ -107,7 +107,7 @@ namespace Presentacion
             // 
             // btnDetalle
             // 
-            this.btnDetalle.Location = new System.Drawing.Point(363, 214);
+            this.btnDetalle.Location = new System.Drawing.Point(84, 390);
             this.btnDetalle.Name = "btnDetalle";
             this.btnDetalle.Size = new System.Drawing.Size(75, 23);
             this.btnDetalle.TabIndex = 7;
@@ -117,9 +117,9 @@ namespace Presentacion
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(466, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(540, 76);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(197, 125);
+            this.pictureBox1.Size = new System.Drawing.Size(197, 287);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
@@ -133,13 +133,14 @@ namespace Presentacion
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgbArticulos);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBFiltrar);
             this.Controls.Add(this.lblFiltrar);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgbArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -151,7 +152,7 @@ namespace Presentacion
         private System.Windows.Forms.Label lblFiltrar;
         private System.Windows.Forms.TextBox txtBFiltrar;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgbArticulos;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
