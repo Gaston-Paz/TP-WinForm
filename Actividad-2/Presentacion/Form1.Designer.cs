@@ -61,6 +61,7 @@ namespace Presentacion
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.White;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Location = new System.Drawing.Point(537, 10);
             this.btnBuscar.Name = "btnBuscar";
@@ -84,6 +85,7 @@ namespace Presentacion
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.White;
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Location = new System.Drawing.Point(130, 341);
             this.btnAgregar.Name = "btnAgregar";
@@ -96,6 +98,7 @@ namespace Presentacion
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.White;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Location = new System.Drawing.Point(230, 341);
             this.btnModificar.Name = "btnModificar";
@@ -108,6 +111,7 @@ namespace Presentacion
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.White;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Location = new System.Drawing.Point(330, 341);
             this.btnEliminar.Name = "btnEliminar";
