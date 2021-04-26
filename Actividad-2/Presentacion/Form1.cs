@@ -56,6 +56,8 @@ namespace Presentacion
                 listaArticulos = articuloNegocio.listar();
                 dgvArticulos.DataSource = listaArticulos;
 
+                dgvArticulos.Columns["UrlImagen"].Visible = false;
+
                 RecargarImg(listaArticulos[0].UrlImagen);
             }
             catch (Exception ex)

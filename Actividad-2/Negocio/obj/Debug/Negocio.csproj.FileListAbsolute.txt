@@ -1,0 +1,11 @@
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Negocio\bin\Debug\Negocio.exe.config
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Negocio\bin\Debug\Negocio.exe
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Negocio\bin\Debug\Dominio.exe
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Negocio\bin\Debug\Dominio.exe.config
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Negocio\obj\Debug\Negocio.exe
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Negocio\obj\Debug\Negocio.pdb

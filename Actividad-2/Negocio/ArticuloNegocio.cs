@@ -16,30 +16,34 @@ namespace Negocio
 
             try
             {
-                string SelectColum = "SELECT A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria";
-                string FromDB = "FROM ARTICULOS AS A, MARCAS AS M, CATEGORIAS AS C";
-                string WhereCond = "WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id";
-                datos.setearConsulta(SelectColum+FromDB+WhereCond);
+                string SelectColum = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, C.Descripcion Categoria, M.Descripcion Marca, A.Precio, A.ImagenUrl ";
+                string FromDB = "FROM ARTICULOS A INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id INNER JOIN MARCAS M ON A.IdMarca = M.Id";
+                
+
+                datos.setearConsulta(SelectColum+FromDB);
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.Id = (string)datos.Lector["A.Codigo"];
-                    aux.Nombre = (string)datos.Lector["A.Nombre"];
-                    aux.Descripcion = (string)datos.Lector["A.Descripcion"];
+                    aux.Id = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    
+                    aux.TipoCategoria = new Categoria((string)datos.Lector.GetString(4));
+                    aux.TipoMarca = new Marca((string)datos.Lector.GetString(5));
 
-                    aux.TipoMarca = new Marca((string)datos.Lector["Marca"]);
-                    aux.TipoCategoria = new Categoria((string)datos.Lector["Categoria"]);
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+                    aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
 
                     lista.Add(aux);
                 }
                 return lista;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
             finally
             {
