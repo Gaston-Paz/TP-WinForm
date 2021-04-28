@@ -25,3 +25,11 @@ C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Dominio.exe
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Negocio.exe
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Dominio.pdb
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Dominio.exe.config
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Negocio.pdb
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Negocio.exe.config
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.FormModificar.resources

@@ -29,7 +29,8 @@ namespace Presentacion
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
+            FormModificar modificar = new FormModificar();
+            modificar.ShowDialog();
         }
 
         private void btnDetalle_Click(object sender, EventArgs e)
@@ -55,8 +56,6 @@ namespace Presentacion
             {
                 listaArticulos = articuloNegocio.listar();
                 dgvArticulos.DataSource = listaArticulos;
-
-                dgvArticulos.Columns["UrlImagen"].Visible = false;
 
                 RecargarImg(listaArticulos[0].UrlImagen);
             }
