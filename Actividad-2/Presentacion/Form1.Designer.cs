@@ -45,6 +45,7 @@ namespace Presentacion
             // lblFiltrar
             // 
             this.lblFiltrar.AutoSize = true;
+            this.lblFiltrar.BackColor = System.Drawing.Color.Transparent;
             this.lblFiltrar.Location = new System.Drawing.Point(9, 15);
             this.lblFiltrar.Name = "lblFiltrar";
             this.lblFiltrar.Size = new System.Drawing.Size(32, 13);

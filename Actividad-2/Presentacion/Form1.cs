@@ -24,7 +24,8 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            FormAgregar formAgregar = new FormAgregar();
+            formAgregar.ShowDialog();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
