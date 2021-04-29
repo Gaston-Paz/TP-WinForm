@@ -60,7 +60,7 @@ namespace Negocio
                 string valores = "values(" + nuevo.Id + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', '" + nuevo.UrlImagen + "', " + nuevo.TipoMarca.Id + ", "+ nuevo.TipoCategoria.Id + ", "+ nuevo.Precio+")";
                 datos.setearConsulta("insert into articulos (Codigo, Nombre, Descripcion, ImagenUrl, IdMarca, IdCategoria, Precio) " + valores);
 
-                datos.ejectutarAccion();
+                datos.ejecutarAccion();
 
             }
             catch (Exception ex)
@@ -71,6 +71,45 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
+        }
+
+        public Articulo buscarArticulo(string filtro, string valor)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                string SelectColum = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, C.Descripcion Categoria, M.Descripcion Marca, A.Precio, A.ImagenUrl ";
+                string FromDB = "FROM ARTICULOS A INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id INNER JOIN MARCAS M ON A.IdMarca = M.Id ";
+                string WhereDB = "WHERE A.Codigo = '" + valor + "'";
+
+                datos.setearConsulta(SelectColum + FromDB + WhereDB);
+                datos.ejecutarLectura();
+
+                datos.Lector.Read();
+
+                Articulo aux = new Articulo();
+                aux.Id = (string)datos.Lector["Codigo"];
+                aux.Nombre = (string)datos.Lector["Nombre"];
+                aux.Descripcion = (string)datos.Lector["Descripcion"];
+
+                aux.TipoCategoria = new Categoria((string)datos.Lector.GetString(4));
+                aux.TipoMarca = new Marca((string)datos.Lector.GetString(5));
+
+                aux.Precio = (decimal)datos.Lector["Precio"];
+                aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
+
+                return aux;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
         }
 
     }

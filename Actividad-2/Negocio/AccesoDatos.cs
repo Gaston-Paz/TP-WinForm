@@ -43,7 +43,7 @@ namespace Negocio
             get { return lector; }
         }
 
-        internal void ejectutarAccion()
+        internal void ejecutarAccion()
         {
             comando.Connection = conexion;
             conexion.Open();
