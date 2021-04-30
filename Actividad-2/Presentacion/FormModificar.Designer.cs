@@ -29,6 +29,7 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormModificar));
             this.lblBuscarArt = new System.Windows.Forms.Label();
             this.txtBCodigo = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -61,6 +62,7 @@ namespace Presentacion
             // txtBCodigo
             // 
             this.txtBCodigo.Location = new System.Drawing.Point(143, 29);
+            this.txtBCodigo.MaxLength = 50;
             this.txtBCodigo.Name = "txtBCodigo";
             this.txtBCodigo.Size = new System.Drawing.Size(157, 20);
             this.txtBCodigo.TabIndex = 1;
@@ -78,6 +80,7 @@ namespace Presentacion
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(143, 78);
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(157, 20);
             this.txtNombre.TabIndex = 4;
@@ -105,6 +108,7 @@ namespace Presentacion
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(143, 127);
+            this.txtDescripcion.MaxLength = 150;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(157, 20);
             this.txtDescripcion.TabIndex = 6;
@@ -148,6 +152,7 @@ namespace Presentacion
             // txtImagenUrl
             // 
             this.txtImagenUrl.Location = new System.Drawing.Point(143, 276);
+            this.txtImagenUrl.MaxLength = 1000;
             this.txtImagenUrl.Name = "txtImagenUrl";
             this.txtImagenUrl.Size = new System.Drawing.Size(157, 20);
             this.txtImagenUrl.TabIndex = 12;
@@ -168,6 +173,7 @@ namespace Presentacion
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(157, 20);
             this.txtPrecio.TabIndex = 14;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // lblPrecio
             // 
@@ -202,7 +208,7 @@ namespace Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(432, 450);
+            this.ClientSize = new System.Drawing.Size(434, 451);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.txtPrecio);
@@ -221,8 +227,10 @@ namespace Presentacion
             this.Controls.Add(this.txtBCodigo);
             this.Controls.Add(this.lblBuscarArt);
             this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormModificar";
-            this.Text = "FormModificar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Modificar Artículo";
             this.Load += new System.EventHandler(this.FormModificar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

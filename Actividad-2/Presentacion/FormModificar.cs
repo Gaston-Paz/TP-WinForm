@@ -24,6 +24,8 @@ namespace Presentacion
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
             MarcaNegocio marcaNegocio = new MarcaNegocio();
 
+            Size = new Size(450,110);
+
             try
             {
                 cmbCategoria.DataSource = categoriaNegocio.listar();
@@ -41,6 +43,8 @@ namespace Presentacion
         {
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             Articulo articulo = new Articulo();
+
+            Size = new Size(450, 490);
 
             try
             {
@@ -65,6 +69,10 @@ namespace Presentacion
             }
         }
 
-        
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8)
+                e.Handled = true;
+        }
     }
 }

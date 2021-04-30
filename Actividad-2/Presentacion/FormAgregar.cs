@@ -76,5 +76,12 @@ namespace Presentacion
             if (dr == DialogResult.Yes)
                 Close();
         }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8)
+                e.Handled = true;
+
+        }
     }
 }

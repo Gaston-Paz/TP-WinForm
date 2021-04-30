@@ -29,6 +29,7 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAgregar));
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDescripción = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -51,7 +52,7 @@ namespace Presentacion
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(60, 75);
+            this.lblNombre.Location = new System.Drawing.Point(26, 72);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(57, 16);
             this.lblNombre.TabIndex = 0;
@@ -61,7 +62,7 @@ namespace Presentacion
             // 
             this.lblDescripción.AutoSize = true;
             this.lblDescripción.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripción.Location = new System.Drawing.Point(60, 120);
+            this.lblDescripción.Location = new System.Drawing.Point(26, 117);
             this.lblDescripción.Name = "lblDescripción";
             this.lblDescripción.Size = new System.Drawing.Size(80, 16);
             this.lblDescripción.TabIndex = 1;
@@ -71,7 +72,7 @@ namespace Presentacion
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(60, 30);
+            this.lblCodigo.Location = new System.Drawing.Point(26, 27);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(52, 16);
             this.lblCodigo.TabIndex = 2;
@@ -81,7 +82,7 @@ namespace Presentacion
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(60, 165);
+            this.lblMarca.Location = new System.Drawing.Point(26, 162);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(46, 16);
             this.lblMarca.TabIndex = 3;
@@ -91,7 +92,7 @@ namespace Presentacion
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(60, 210);
+            this.lblCategoria.Location = new System.Drawing.Point(26, 207);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(67, 16);
             this.lblCategoria.TabIndex = 4;
@@ -101,7 +102,7 @@ namespace Presentacion
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(60, 255);
+            this.lblPrecio.Location = new System.Drawing.Point(26, 252);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(47, 16);
             this.lblPrecio.TabIndex = 5;
@@ -110,7 +111,7 @@ namespace Presentacion
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(164, 30);
+            this.txtCodigo.Location = new System.Drawing.Point(130, 27);
             this.txtCodigo.MaxLength = 50;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(256, 20);
@@ -118,29 +119,32 @@ namespace Presentacion
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(164, 75);
+            this.txtNombre.Location = new System.Drawing.Point(130, 72);
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(256, 20);
             this.txtNombre.TabIndex = 7;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(164, 120);
+            this.txtDescripcion.Location = new System.Drawing.Point(130, 117);
+            this.txtDescripcion.MaxLength = 150;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(256, 20);
             this.txtDescripcion.TabIndex = 8;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(164, 255);
+            this.txtPrecio.Location = new System.Drawing.Point(130, 252);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(256, 20);
             this.txtPrecio.TabIndex = 9;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // cmbMarca
             // 
             this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(164, 165);
+            this.cmbMarca.Location = new System.Drawing.Point(130, 162);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(256, 21);
             this.cmbMarca.TabIndex = 10;
@@ -148,7 +152,7 @@ namespace Presentacion
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(164, 209);
+            this.cmbCategoria.Location = new System.Drawing.Point(130, 206);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(256, 21);
             this.cmbCategoria.TabIndex = 11;
@@ -158,7 +162,7 @@ namespace Presentacion
             this.btnAgregar.BackColor = System.Drawing.Color.White;
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Location = new System.Drawing.Point(152, 388);
+            this.btnAgregar.Location = new System.Drawing.Point(130, 359);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 12;
@@ -171,7 +175,7 @@ namespace Presentacion
             this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(289, 388);
+            this.btnCancelar.Location = new System.Drawing.Point(311, 359);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 13;
@@ -181,7 +185,8 @@ namespace Presentacion
             // 
             // txtUrlImagen
             // 
-            this.txtUrlImagen.Location = new System.Drawing.Point(164, 300);
+            this.txtUrlImagen.Location = new System.Drawing.Point(130, 297);
+            this.txtUrlImagen.MaxLength = 1000;
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.Size = new System.Drawing.Size(256, 20);
             this.txtUrlImagen.TabIndex = 14;
@@ -190,7 +195,7 @@ namespace Presentacion
             // 
             this.lblUrlImagen.AutoSize = true;
             this.lblUrlImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUrlImagen.Location = new System.Drawing.Point(60, 300);
+            this.lblUrlImagen.Location = new System.Drawing.Point(26, 297);
             this.lblUrlImagen.Name = "lblUrlImagen";
             this.lblUrlImagen.Size = new System.Drawing.Size(73, 16);
             this.lblUrlImagen.TabIndex = 15;
@@ -201,7 +206,7 @@ namespace Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(528, 449);
+            this.ClientSize = new System.Drawing.Size(460, 417);
             this.Controls.Add(this.lblUrlImagen);
             this.Controls.Add(this.txtUrlImagen);
             this.Controls.Add(this.btnCancelar);
@@ -219,6 +224,7 @@ namespace Presentacion
             this.Controls.Add(this.lblDescripción);
             this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
