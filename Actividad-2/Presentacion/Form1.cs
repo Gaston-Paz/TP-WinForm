@@ -61,7 +61,6 @@ namespace Presentacion
                 
                 dgvArticulos.Columns["Descripcion"].Visible = false;
                 dgvArticulos.Columns["UrlImagen"].Visible = false;
-                dgvArticulos.Columns["Codigo"].Visible = false;
 
                 RecargarImg(listaArticulos[0].UrlImagen);
             }
