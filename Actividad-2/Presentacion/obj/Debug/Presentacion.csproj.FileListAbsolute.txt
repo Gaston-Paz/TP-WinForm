@@ -35,3 +35,4 @@ C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Domi
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Negocio.pdb
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Negocio.exe.config
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.FormModificar.resources

@@ -47,7 +47,7 @@ namespace Presentacion
                 string codigo = txtBCodigo.Text;
                 articulo = articuloNegocio.buscarArticulo("", codigo);
 
-                txtBCodigo.Text = articulo.Id;
+                txtBCodigo.Text = articulo.Codigo;
                 txtNombre.Text = articulo.Nombre;
                 txtDescripcion.Text = articulo.Descripcion;
                 cmbCategoria.Text = articulo.TipoCategoria.Nombre;

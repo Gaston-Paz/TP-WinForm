@@ -46,9 +46,10 @@ namespace Presentacion
             // 
             this.lblFiltrar.AutoSize = true;
             this.lblFiltrar.BackColor = System.Drawing.Color.Transparent;
-            this.lblFiltrar.Location = new System.Drawing.Point(9, 15);
+            this.lblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltrar.Location = new System.Drawing.Point(4, 13);
             this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(32, 13);
+            this.lblFiltrar.Size = new System.Drawing.Size(41, 16);
             this.lblFiltrar.TabIndex = 0;
             this.lblFiltrar.Text = "Filtrar";
             // 
@@ -73,13 +74,18 @@ namespace Presentacion
             // 
             // dgvArticulos
             // 
+            this.dgvArticulos.AllowUserToAddRows = false;
+            this.dgvArticulos.AllowUserToDeleteRows = false;
             this.dgvArticulos.AllowUserToResizeRows = false;
             this.dgvArticulos.BackgroundColor = System.Drawing.Color.White;
             this.dgvArticulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.GridColor = System.Drawing.Color.Black;
             this.dgvArticulos.Location = new System.Drawing.Point(12, 39);
+            this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.Size = new System.Drawing.Size(600, 287);
+            this.dgvArticulos.ReadOnly = true;
+            this.dgvArticulos.Size = new System.Drawing.Size(498, 287);
             this.dgvArticulos.TabIndex = 3;
             this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
             // 
@@ -138,9 +144,11 @@ namespace Presentacion
             // 
             // pbxArticulo
             // 
-            this.pbxArticulo.Location = new System.Drawing.Point(628, 39);
+            this.pbxArticulo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxArticulo.Location = new System.Drawing.Point(537, 39);
             this.pbxArticulo.Name = "pbxArticulo";
-            this.pbxArticulo.Size = new System.Drawing.Size(373, 333);
+            this.pbxArticulo.Size = new System.Drawing.Size(292, 287);
+            this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticulo.TabIndex = 8;
             this.pbxArticulo.TabStop = false;
             // 
@@ -148,8 +156,8 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1037, 557);
+            this.BackColor = System.Drawing.Color.DarkGray;
+            this.ClientSize = new System.Drawing.Size(856, 390);
             this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnEliminar);

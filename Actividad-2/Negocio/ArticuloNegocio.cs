@@ -16,7 +16,7 @@ namespace Negocio
 
             try
             {
-                string SelectColum = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, C.Descripcion Categoria, M.Descripcion Marca, A.Precio, A.ImagenUrl ";
+                string SelectColum = "SELECT A.Codigo, A.Nombre, A.Descripcion, C.Descripcion Categoria, M.Descripcion Marca, A.Precio, A.ImagenUrl ";
                 string FromDB = "FROM ARTICULOS A INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id INNER JOIN MARCAS M ON A.IdMarca = M.Id";
                 
 
@@ -26,12 +26,12 @@ namespace Negocio
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.Id = (string)datos.Lector["Codigo"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
                     
-                    aux.TipoCategoria = new Categoria((string)datos.Lector.GetString(4));
-                    aux.TipoMarca = new Marca((string)datos.Lector.GetString(5));
+                    aux.TipoCategoria = new Categoria((string)datos.Lector.GetString(3));
+                    aux.TipoMarca = new Marca((string)datos.Lector.GetString(4));
 
                     aux.Precio = (decimal)datos.Lector["Precio"];
                     aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
@@ -51,13 +51,12 @@ namespace Negocio
             }
         }
 
-
         public void agregar(Articulo nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string valores = "values(" + nuevo.Id + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', '" + nuevo.UrlImagen + "', " + nuevo.TipoMarca.Id + ", "+ nuevo.TipoCategoria.Id + ", "+ nuevo.Precio+")";
+                string valores = "values('" + nuevo.Codigo + "', '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', '" + nuevo.UrlImagen + "', " + nuevo.TipoMarca.Id + ", "+ nuevo.TipoCategoria.Id + ", "+ nuevo.Precio+")";
                 datos.setearConsulta("insert into articulos (Codigo, Nombre, Descripcion, ImagenUrl, IdMarca, IdCategoria, Precio) " + valores);
 
                 datos.ejecutarAccion();
@@ -89,7 +88,7 @@ namespace Negocio
                 datos.Lector.Read();
 
                 Articulo aux = new Articulo();
-                aux.Id = (string)datos.Lector["Codigo"];
+                aux.Codigo = (string)datos.Lector["Codigo"];
                 aux.Nombre = (string)datos.Lector["Nombre"];
                 aux.Descripcion = (string)datos.Lector["Descripcion"];
 

@@ -31,15 +31,16 @@ namespace Presentacion
 
             try
             {
+                nuevo.Codigo = txtCodigo.Text;
                 nuevo.Nombre = txtNombre.Text;
-                nuevo.Id = txtCodigo.Text;
-                nuevo.Descripcion = txtDescripcion.Text;
+                nuevo.Descripcion = txtDescripcion.Text;              
+                nuevo.TipoMarca = (Marca)cmbMarca.SelectedItem;
+                nuevo.TipoCategoria = (Categoria)cmbCategoria.SelectedItem;
                 nuevo.Precio = decimal.Parse(txtPrecio.Text);
                 nuevo.UrlImagen = txtUrlImagen.Text;
-                nuevo.TipoCategoria = (Categoria)cmbCategoria.SelectedItem;
-                nuevo.TipoMarca = (Marca)cmbMarca.SelectedItem;
-
+                
                 articuloNegrocio.agregar(nuevo);
+
                 MessageBox.Show("El artículo se agregó con éxito");
                 Close();
             }
@@ -67,6 +68,13 @@ namespace Presentacion
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("¿Estás seguro que deseas salir? Perderás la información", "Agregar Artículo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+                Close();
         }
     }
 }

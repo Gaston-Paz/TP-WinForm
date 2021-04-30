@@ -201,7 +201,7 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(432, 450);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
@@ -220,6 +220,7 @@ namespace Presentacion
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBCodigo);
             this.Controls.Add(this.lblBuscarArt);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "FormModificar";
             this.Text = "FormModificar";
             this.Load += new System.EventHandler(this.FormModificar_Load);
