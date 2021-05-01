@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class Form1
+    partial class Presentacion
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,9 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Presentacion));
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.txtBFiltrar = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -61,18 +60,6 @@ namespace Presentacion
             this.txtBFiltrar.Size = new System.Drawing.Size(463, 20);
             this.txtBFiltrar.TabIndex = 1;
             this.txtBFiltrar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBFiltrar_KeyUp);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.White;
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Location = new System.Drawing.Point(537, 10);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // dgvArticulos
             // 
@@ -155,7 +142,7 @@ namespace Presentacion
             this.pbxArticulo.TabIndex = 8;
             this.pbxArticulo.TabStop = false;
             // 
-            // Form1
+            // Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -167,12 +154,11 @@ namespace Presentacion
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvArticulos);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBFiltrar);
             this.Controls.Add(this.lblFiltrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "Presentacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABM Artículos";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -187,7 +173,6 @@ namespace Presentacion
 
         private System.Windows.Forms.Label lblFiltrar;
         private System.Windows.Forms.TextBox txtBFiltrar;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;

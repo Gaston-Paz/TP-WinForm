@@ -18,14 +18,12 @@ C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Negocio.pdb
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Negocio.exe.config
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
-C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.Form1.resources
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.pdb
-C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.FormAgregar.resources
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.FormAgregar.resources
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Dominio.exe
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Negocio.exe
@@ -36,3 +34,5 @@ C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Nego
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.Marca_Categoria.resources
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.Marca_Categoria.resources
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.FormArticulo.resources
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.Presentacion.resources

@@ -12,22 +12,23 @@ using Negocio;
 
 namespace Presentacion
 {
-    public partial class FormAgregar : Form
+    public partial class FormArticulo : Form
     {
         private Articulo nuevo = null;
-        public FormAgregar()
+        public FormArticulo()
         {
             InitializeComponent();
         }
 
-        public FormAgregar(Articulo nuevo)
+        public FormArticulo(Articulo nuevo)
         {
             InitializeComponent();
             this.nuevo = nuevo;
             Text = "Modificar Articulo";
+
         }
 
-        public FormAgregar(string detalle, Articulo nuevo)
+        public FormArticulo(string detalle, Articulo nuevo)
         {
             InitializeComponent();
             this.nuevo = nuevo;
@@ -42,6 +43,8 @@ namespace Presentacion
             btnAgregar.Visible = false;
             btnCancelar.Visible = false;
             Size = new Size(780, 400);
+            cmbCategoria.Enabled = false;
+            cmbMarca.Enabled = false;
         }
 
        private void btnAgregar_Click(object sender, EventArgs e)

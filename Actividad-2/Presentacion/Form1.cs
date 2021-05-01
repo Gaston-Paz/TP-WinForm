@@ -12,11 +12,11 @@ using Negocio;
 
 namespace Presentacion
 {
-    public partial class Form1 : Form
+    public partial class Presentacion : Form
     {
         private List<Articulo> listaArticulos;
 
-        public Form1()
+        public Presentacion()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            FormAgregar formAgregar = new FormAgregar();
+            FormArticulo formAgregar = new FormArticulo();
             formAgregar.ShowDialog();
             cargarGrilla();
         }
@@ -34,7 +34,7 @@ namespace Presentacion
             try
             {
                 Articulo nuevo = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                FormAgregar detalle = new FormAgregar("Detalle de Artículo", nuevo);
+                FormArticulo detalle = new FormArticulo("Detalle de Artículo", nuevo);
                 detalle.ShowDialog();
             }
             catch (Exception ex)
@@ -152,7 +152,7 @@ namespace Presentacion
         private void btnModificar_Click_1(object sender, EventArgs e)
         {
             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            FormAgregar modificar = new FormAgregar(seleccionado);
+            FormArticulo modificar = new FormArticulo(seleccionado);
 
             try
             {
