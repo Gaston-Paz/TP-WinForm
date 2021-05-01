@@ -72,6 +72,29 @@ namespace Negocio
             }
         }
 
+        public void modificar(Articulo nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string task = "UPDATE ARTICULOS SET ";
+                string valores = "Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idmarca, IdCategoria = @idcategoria, ImagenUrl = @imagenUrl, Precio = @precio";
+                string where = "WHERE Id = ";
+                datos.setearConsulta(task + valores + where);
+
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
         public Articulo buscarArticulo(string filtro, string valor)
         {
             AccesoDatos datos = new AccesoDatos();
