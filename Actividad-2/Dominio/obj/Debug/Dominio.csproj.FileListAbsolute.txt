@@ -5,3 +5,10 @@ C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Dominio\obj\Debug\Domin
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Dominio\obj\Debug\Dominio.exe
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Dominio\bin\Debug\Dominio.exe.config
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Dominio\bin\Debug\Dominio.exe
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Dominio\obj\Debug\Dominio.exe
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Dominio\obj\Debug\Dominio.pdb

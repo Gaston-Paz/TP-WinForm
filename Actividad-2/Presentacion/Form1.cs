@@ -79,6 +79,7 @@ namespace Presentacion
 
         private void ocultarColumnas()
         {
+            dgvArticulos.Columns["Id"].Visible = false;
             dgvArticulos.Columns["Descripcion"].Visible = false;
             dgvArticulos.Columns["UrlImagen"].Visible = false;
         }
