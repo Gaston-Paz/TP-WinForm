@@ -58,6 +58,7 @@ namespace Negocio
             try
             {
                 datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, ImagenUrl, IdMarca, IdCategoria, Precio) VALUES(@codigo, @nombre, @descripcion, @imagenUrl, @idMarca, @idCategoria, @precio)");
+                
                 datos.setearParametro("@codigo", nuevo.Codigo);
                 datos.setearParametro("@nombre", nuevo.Nombre);
                 datos.setearParametro("@descripcion", nuevo.Descripcion);
@@ -84,12 +85,16 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string task = "UPDATE ARTICULOS SET ";
-                string valores = "Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idmarca, IdCategoria = @idcategoria, ImagenUrl = @imagenUrl, Precio = @precio ";
-                string where = "WHERE Id = @Id";
-                datos.setearConsulta(task + valores + where);
-                
-                //datos.setearParametro("@nombre",nuevo.Nombre);
+                datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, ImagenUrl = @imagenUrl, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio WHERE Id = @id");
+
+                datos.setearParametro("@codigo", nuevo.Codigo);
+                datos.setearParametro("@nombre", nuevo.Nombre);
+                datos.setearParametro("@descripcion", nuevo.Descripcion);
+                datos.setearParametro("@imagenUrl", nuevo.UrlImagen);
+                datos.setearParametro("@idMarca", nuevo.TipoMarca);
+                datos.setearParametro("@idCategoria", nuevo.TipoCategoria);
+                datos.setearParametro("@precio", nuevo.Precio);
+                datos.setearParametro("@id", nuevo.Id);
 
                 datos.ejecutarAccion();
 
