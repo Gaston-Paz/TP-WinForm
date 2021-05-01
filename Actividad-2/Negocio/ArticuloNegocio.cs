@@ -16,7 +16,7 @@ namespace Negocio
 
             try
             {
-                string SelectColum = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, C.Descripcion Categoria, M.Descripcion Marca, A.Precio, A.ImagenUrl ";
+                string SelectColum = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, C.Descripcion Categoria, M.Descripcion Marca, A.Precio, A.ImagenUrl, C.Id, M.Id ";
                 string FromDB = "FROM ARTICULOS A INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id INNER JOIN MARCAS M ON A.IdMarca = M.Id";
                 
 
@@ -31,8 +31,8 @@ namespace Negocio
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
                     
-                    aux.TipoCategoria = new Categoria((string)datos.Lector.GetString(3));
-                    aux.TipoMarca = new Marca((string)datos.Lector.GetString(4));
+                    aux.TipoCategoria = new Categoria((int)datos.Lector.GetInt32(8),(string)datos.Lector.GetString(4));
+                    aux.TipoMarca = new Marca((int)datos.Lector.GetInt32(9),(string)datos.Lector.GetString(5));
 
                     aux.Precio = (decimal)datos.Lector["Precio"];
                     aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
@@ -63,8 +63,8 @@ namespace Negocio
                 datos.setearParametro("@nombre", nuevo.Nombre);
                 datos.setearParametro("@descripcion", nuevo.Descripcion);
                 datos.setearParametro("@imagenUrl", nuevo.UrlImagen);
-                datos.setearParametro("@idMarca", nuevo.TipoMarca);
-                datos.setearParametro("@idCategoria", nuevo.TipoCategoria);
+                datos.setearParametro("@idMarca", nuevo.TipoMarca.Id);
+                datos.setearParametro("@idCategoria", nuevo.TipoCategoria.Id);
                 datos.setearParametro("@precio", nuevo.Precio);
 
                 datos.ejecutarAccion();
@@ -91,8 +91,8 @@ namespace Negocio
                 datos.setearParametro("@nombre", nuevo.Nombre);
                 datos.setearParametro("@descripcion", nuevo.Descripcion);
                 datos.setearParametro("@imagenUrl", nuevo.UrlImagen);
-                datos.setearParametro("@idMarca", nuevo.TipoMarca);
-                datos.setearParametro("@idCategoria", nuevo.TipoCategoria);
+                datos.setearParametro("@idMarca", nuevo.TipoMarca.Id);
+                datos.setearParametro("@idCategoria", nuevo.TipoCategoria.Id);
                 datos.setearParametro("@precio", nuevo.Precio);
                 datos.setearParametro("@id", nuevo.Id);
 

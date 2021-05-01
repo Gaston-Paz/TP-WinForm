@@ -54,8 +54,6 @@ namespace Presentacion
                 dgvArticulos.DataSource = listaArticulos;
 
                 ocultarColumnas();
-                //dgvArticulos.Columns["Descripcion"].Visible = false;
-                //dgvArticulos.Columns["UrlImagen"].Visible = false;
 
                 RecargarImg(listaArticulos[0].UrlImagen);
             }

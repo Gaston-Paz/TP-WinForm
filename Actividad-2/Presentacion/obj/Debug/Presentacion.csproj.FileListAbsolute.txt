@@ -27,7 +27,6 @@ C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.pdb
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.FormAgregar.resources
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.FormAgregar.resources
-C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.FormModificar.resources
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Dominio.exe
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Negocio.exe
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Dominio.pdb
@@ -36,3 +35,4 @@ C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Nego
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\Negocio.exe.config
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.Marca_Categoria.resources
+C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.Marca_Categoria.resources

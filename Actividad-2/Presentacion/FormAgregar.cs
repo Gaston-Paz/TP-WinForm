@@ -29,7 +29,7 @@ namespace Presentacion
 
        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Articulo nuevo = new Articulo();
+            
             ArticuloNegocio articuloNegrocio = new ArticuloNegocio();
 
             try
@@ -42,9 +42,17 @@ namespace Presentacion
                 nuevo.Precio = decimal.Parse(txtPrecio.Text);
                 nuevo.UrlImagen = txtUrlImagen.Text;
                 
-                articuloNegrocio.agregar(nuevo);
+                if(nuevo.Id == 0)
+                {
+                    articuloNegrocio.agregar(nuevo);
+                    MessageBox.Show("El artículo se agregó con éxito");
+                }
+                else
+                {
+                    articuloNegrocio.modificar(nuevo);
+                    MessageBox.Show("El artículo se modificó con éxito");
+                }
 
-                MessageBox.Show("El artículo se agregó con éxito");
                 Close();
             }
             catch (Exception ex)

@@ -146,6 +146,7 @@ namespace Presentacion
             // 
             // cmbMarca
             // 
+            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMarca.FormattingEnabled = true;
             this.cmbMarca.Location = new System.Drawing.Point(130, 162);
             this.cmbMarca.Name = "cmbMarca";
@@ -154,6 +155,7 @@ namespace Presentacion
             // 
             // cmbCategoria
             // 
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(130, 206);
             this.cmbCategoria.Name = "cmbCategoria";
