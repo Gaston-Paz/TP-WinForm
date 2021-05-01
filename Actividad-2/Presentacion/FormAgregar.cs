@@ -96,6 +96,7 @@ namespace Presentacion
                 MessageBox.Show(ex.ToString());
             }
         }
+        
         private void RecargarImg(string img)
         {
             try
@@ -112,12 +113,18 @@ namespace Presentacion
 
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
+            Marca nuevo = new Marca();
+            Marca_Categoria marcaCategoria = new Marca_Categoria(nuevo);
+            marcaCategoria.ShowDialog();
             
         }
 
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
         {
-
+            Categoria nuevo = new Categoria();
+            Marca_Categoria marcaCategoria = new Marca_Categoria(nuevo);
+            marcaCategoria.ShowDialog();
+            
         }
     }
 }

@@ -16,6 +16,10 @@ namespace Dominio
         {
             Nombre = nombre;
         }
+        public Marca()
+        {
+            
+        }
 
         public Marca(int id, string nombre)
         {

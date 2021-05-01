@@ -16,6 +16,10 @@ namespace Dominio
         {
             Nombre = nombre;
         }
+        public Categoria( )
+        {
+            
+        }
 
         public Categoria(int id, string nombre)
         {
