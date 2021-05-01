@@ -58,9 +58,10 @@ namespace Presentacion
             {
                 listaArticulos = articuloNegocio.listar();
                 dgvArticulos.DataSource = listaArticulos;
-                
-                dgvArticulos.Columns["Descripcion"].Visible = false;
-                dgvArticulos.Columns["UrlImagen"].Visible = false;
+
+                ocultarColumnas();
+                //dgvArticulos.Columns["Descripcion"].Visible = false;
+                //dgvArticulos.Columns["UrlImagen"].Visible = false;
 
                 RecargarImg(listaArticulos[0].UrlImagen);
             }
@@ -74,6 +75,12 @@ namespace Presentacion
         private void RecargarImg(string img)
         {
             pbxArticulo.Load(img);
+        }
+
+        private void ocultarColumnas()
+        {
+            dgvArticulos.Columns["Descripcion"].Visible = false;
+            dgvArticulos.Columns["UrlImagen"].Visible = false;
         }
 
         private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
