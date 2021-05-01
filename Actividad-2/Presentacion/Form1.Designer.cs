@@ -60,6 +60,7 @@ namespace Presentacion
             this.txtBFiltrar.Name = "txtBFiltrar";
             this.txtBFiltrar.Size = new System.Drawing.Size(463, 20);
             this.txtBFiltrar.TabIndex = 1;
+            this.txtBFiltrar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBFiltrar_KeyUp);
             // 
             // btnBuscar
             // 
@@ -115,7 +116,6 @@ namespace Presentacion
             this.btnModificar.TabIndex = 5;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 

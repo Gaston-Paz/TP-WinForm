@@ -82,6 +82,7 @@ namespace Presentacion
             dgvArticulos.Columns["Id"].Visible = false;
             dgvArticulos.Columns["Descripcion"].Visible = false;
             dgvArticulos.Columns["UrlImagen"].Visible = false;
+            dgvArticulos.Columns["Precio"].Visible = false;
         }
 
         private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -94,6 +95,36 @@ namespace Presentacion
         {
             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             RecargarImg(seleccionado.UrlImagen);
+        }
+
+        private void txtBFiltrar_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                buscar();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void buscar()
+        {
+            List<Articulo> listaFiltrada;
+            if(txtBFiltrar.Text != "")
+            {
+                listaFiltrada = listaArticulos.FindAll(Art => Art.Nombre.ToUpper().Contains(txtBFiltrar.Text.ToUpper()) || Art.TipoMarca.Nombre.ToUpper().Contains(txtBFiltrar.Text.ToUpper()) || Art.TipoCategoria.Nombre.ToUpper().Contains(txtBFiltrar.Text.ToUpper()) );
+                dgvArticulos.DataSource = null;
+                dgvArticulos.DataSource = listaFiltrada;
+            }
+            else
+            {
+                dgvArticulos.DataSource = null;
+                dgvArticulos.DataSource = listaArticulos;
+            }
+            ocultarColumnas();
         }
     }
 }
