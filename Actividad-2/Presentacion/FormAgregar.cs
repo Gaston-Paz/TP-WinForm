@@ -27,6 +27,23 @@ namespace Presentacion
             Text = "Modificar Articulo";
         }
 
+        public FormAgregar(string detalle, Articulo nuevo)
+        {
+            InitializeComponent();
+            this.nuevo = nuevo;
+            Text = detalle;
+            txtCodigo.ReadOnly = true;
+            txtNombre.ReadOnly = true;
+            txtDescripcion.ReadOnly = true;
+            txtPrecio.ReadOnly = true;
+            txtUrlImagen.ReadOnly = true;
+            btnAgregarCategoria.Visible = false;
+            btnAgregarMarca.Visible = false;
+            btnAgregar.Visible = false;
+            btnCancelar.Visible = false;
+            Size = new Size(780, 400);
+        }
+
        private void btnAgregar_Click(object sender, EventArgs e)
         {
             
