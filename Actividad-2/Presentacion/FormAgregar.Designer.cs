@@ -224,9 +224,9 @@ namespace Presentacion
             // pbAgregar
             // 
             this.pbAgregar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbAgregar.Location = new System.Drawing.Point(485, 27);
+            this.pbAgregar.Location = new System.Drawing.Point(447, 27);
             this.pbAgregar.Name = "pbAgregar";
-            this.pbAgregar.Size = new System.Drawing.Size(253, 290);
+            this.pbAgregar.Size = new System.Drawing.Size(291, 290);
             this.pbAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAgregar.TabIndex = 16;
             this.pbAgregar.TabStop = false;

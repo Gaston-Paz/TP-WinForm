@@ -166,6 +166,11 @@ namespace Presentacion
             Marca_Categoria marcaCategoria = new Marca_Categoria(nuevo);
             marcaCategoria.ShowDialog();
             
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            cmbMarca.DataSource = marcaNegocio.listar();
+            
+
+
         }
 
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
@@ -173,7 +178,9 @@ namespace Presentacion
             Categoria nuevo = new Categoria();
             Marca_Categoria marcaCategoria = new Marca_Categoria(nuevo);
             marcaCategoria.ShowDialog();
-            
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            cmbCategoria.DataSource = categoriaNegocio.listar();
+
         }
     }
 }

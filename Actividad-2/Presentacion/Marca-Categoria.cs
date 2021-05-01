@@ -38,7 +38,7 @@ namespace Presentacion
                 CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
                 Categoria nuevo = new Categoria(txtNombre.Text);
                 categoriaNegocio.agregarCategoria(nuevo);
-                
+                                
             }
             else if (Text == "Agregar Marca")
             {
@@ -48,7 +48,10 @@ namespace Presentacion
             }
 
             MessageBox.Show("Guardado con éxito");
+            
+
             Close();
         }
+   
     }
 }

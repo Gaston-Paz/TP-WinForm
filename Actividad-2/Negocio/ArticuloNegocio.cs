@@ -34,7 +34,7 @@ namespace Negocio
                     aux.TipoCategoria = new Categoria((int)datos.Lector.GetInt32(8),(string)datos.Lector.GetString(4));
                     aux.TipoMarca = new Marca((int)datos.Lector.GetInt32(9),(string)datos.Lector.GetString(5));
 
-                    aux.Precio = (decimal)datos.Lector["Precio"];
+                    aux.Precio = decimal.Round((decimal)datos.Lector["Precio"], 2);
                     aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
 
                     lista.Add(aux);
