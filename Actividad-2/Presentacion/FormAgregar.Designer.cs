@@ -46,6 +46,10 @@ namespace Presentacion
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtUrlImagen = new System.Windows.Forms.TextBox();
             this.lblUrlImagen = new System.Windows.Forms.Label();
+            this.btnAgregarMarca = new System.Windows.Forms.Button();
+            this.pbAgregar = new System.Windows.Forms.PictureBox();
+            this.btnAgregarCategoria = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -166,7 +170,7 @@ namespace Presentacion
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 12;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Text = "Aceptar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -190,6 +194,7 @@ namespace Presentacion
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.Size = new System.Drawing.Size(256, 20);
             this.txtUrlImagen.TabIndex = 14;
+            this.txtUrlImagen.TextChanged += new System.EventHandler(this.txtUrlImagen_TextChanged);
             // 
             // lblUrlImagen
             // 
@@ -201,12 +206,53 @@ namespace Presentacion
             this.lblUrlImagen.TabIndex = 15;
             this.lblUrlImagen.Text = "Url Imagen";
             // 
+            // btnAgregarMarca
+            // 
+            this.btnAgregarMarca.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAgregarMarca.BackgroundImage = global::Presentacion.Properties.Resources._;
+            this.btnAgregarMarca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarMarca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarMarca.Location = new System.Drawing.Point(399, 162);
+            this.btnAgregarMarca.Name = "btnAgregarMarca";
+            this.btnAgregarMarca.Size = new System.Drawing.Size(27, 21);
+            this.btnAgregarMarca.TabIndex = 17;
+            this.btnAgregarMarca.UseVisualStyleBackColor = false;
+            this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
+            // 
+            // pbAgregar
+            // 
+            this.pbAgregar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbAgregar.Location = new System.Drawing.Point(485, 27);
+            this.pbAgregar.Name = "pbAgregar";
+            this.pbAgregar.Size = new System.Drawing.Size(253, 290);
+            this.pbAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAgregar.TabIndex = 16;
+            this.pbAgregar.TabStop = false;
+            // 
+            // btnAgregarCategoria
+            // 
+            this.btnAgregarCategoria.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAgregarCategoria.BackgroundImage = global::Presentacion.Properties.Resources._;
+            this.btnAgregarCategoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregarCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(399, 206);
+            this.btnAgregarCategoria.Name = "btnAgregarCategoria";
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(27, 21);
+            this.btnAgregarCategoria.TabIndex = 18;
+            this.btnAgregarCategoria.UseVisualStyleBackColor = false;
+            this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
+            // 
             // FormAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(460, 417);
+            this.ClientSize = new System.Drawing.Size(760, 417);
+            this.Controls.Add(this.btnAgregarCategoria);
+            this.Controls.Add(this.btnAgregarMarca);
+            this.Controls.Add(this.pbAgregar);
             this.Controls.Add(this.lblUrlImagen);
             this.Controls.Add(this.txtUrlImagen);
             this.Controls.Add(this.btnCancelar);
@@ -230,6 +276,7 @@ namespace Presentacion
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Artículo";
             this.Load += new System.EventHandler(this.FormAgregar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbAgregar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +300,8 @@ namespace Presentacion
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtUrlImagen;
         private System.Windows.Forms.Label lblUrlImagen;
+        private System.Windows.Forms.PictureBox pbAgregar;
+        private System.Windows.Forms.Button btnAgregarMarca;
+        private System.Windows.Forms.Button btnAgregarCategoria;
     }
 }

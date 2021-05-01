@@ -31,8 +31,7 @@ namespace Presentacion
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            FormModificar modificar = new FormModificar();
-            modificar.ShowDialog();
+            
         }
 
         private void btnDetalle_Click(object sender, EventArgs e)

@@ -83,5 +83,41 @@ namespace Presentacion
                 e.Handled = true;
 
         }
+
+        private void txtUrlImagen_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                RecargarImg(txtUrlImagen.Text);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        private void RecargarImg(string img)
+        {
+            try
+            {
+                pbAgregar.Load(img);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            
+        }
+
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
