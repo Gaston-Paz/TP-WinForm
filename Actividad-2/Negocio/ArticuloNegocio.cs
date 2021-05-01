@@ -82,6 +82,8 @@ namespace Negocio
                 string valores = "Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idmarca, IdCategoria = @idcategoria, ImagenUrl = @imagenUrl, Precio = @precio ";
                 string where = "WHERE Id = @Id";
                 datos.setearConsulta(task + valores + where);
+                
+                //datos.setearParametro("@nombre",nuevo.Nombre);
 
                 datos.ejecutarAccion();
 
