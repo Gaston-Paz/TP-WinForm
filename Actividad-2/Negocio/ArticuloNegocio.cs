@@ -57,8 +57,15 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string valores = "values('" + nuevo.Codigo + "', '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', '" + nuevo.UrlImagen + "', " + nuevo.TipoMarca.Id + ", "+ nuevo.TipoCategoria.Id + ", "+ nuevo.Precio+")";
-                datos.setearConsulta("insert into articulos (Codigo, Nombre, Descripcion, ImagenUrl, IdMarca, IdCategoria, Precio) " + valores);
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, ImagenUrl, IdMarca, IdCategoria, Precio) VALUES(@codigo, @nombre, @descripcion, @imagenUrl, @idMarca, @idCategoria, @precio)");
+                
+                datos.setearParametro("@codigo", nuevo.Codigo);
+                datos.setearParametro("@nombre", nuevo.Nombre);
+                datos.setearParametro("@descripcion", nuevo.Descripcion);
+                datos.setearParametro("@imagenUrl", nuevo.UrlImagen);
+                datos.setearParametro("@idMarca", nuevo.TipoMarca);
+                datos.setearParametro("@idCategoria", nuevo.TipoCategoria);
+                datos.setearParametro("@precio", nuevo.Precio);
 
                 datos.ejecutarAccion();
 
@@ -78,12 +85,16 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string task = "UPDATE ARTICULOS SET ";
-                string valores = "Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idmarca, IdCategoria = @idcategoria, ImagenUrl = @imagenUrl, Precio = @precio ";
-                string where = "WHERE Id = @Id";
-                datos.setearConsulta(task + valores + where);
-                
-                //datos.setearParametro("@nombre",nuevo.Nombre);
+                datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, ImagenUrl = @imagenUrl, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio WHERE Id = @id");
+
+                datos.setearParametro("@codigo", nuevo.Codigo);
+                datos.setearParametro("@nombre", nuevo.Nombre);
+                datos.setearParametro("@descripcion", nuevo.Descripcion);
+                datos.setearParametro("@imagenUrl", nuevo.UrlImagen);
+                datos.setearParametro("@idMarca", nuevo.TipoMarca);
+                datos.setearParametro("@idCategoria", nuevo.TipoCategoria);
+                datos.setearParametro("@precio", nuevo.Precio);
+                datos.setearParametro("@id", nuevo.Id);
 
                 datos.ejecutarAccion();
 
@@ -116,45 +127,6 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
-        }
-
-        public Articulo buscarArticulo(string filtro, string valor)
-        {
-            AccesoDatos datos = new AccesoDatos();
-
-            try
-            {
-                string SelectColum = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, C.Descripcion Categoria, M.Descripcion Marca, A.Precio, A.ImagenUrl ";
-                string FromDB = "FROM ARTICULOS A INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id INNER JOIN MARCAS M ON A.IdMarca = M.Id ";
-                string WhereDB = "WHERE A.Codigo = '" + valor + "'";
-
-                datos.setearConsulta(SelectColum + FromDB + WhereDB);
-                datos.ejecutarLectura();
-
-                datos.Lector.Read();
-
-                Articulo aux = new Articulo();
-                aux.Codigo = (string)datos.Lector["Codigo"];
-                aux.Nombre = (string)datos.Lector["Nombre"];
-                aux.Descripcion = (string)datos.Lector["Descripcion"];
-
-                aux.TipoCategoria = new Categoria((string)datos.Lector.GetString(4));
-                aux.TipoMarca = new Marca((string)datos.Lector.GetString(5));
-
-                aux.Precio = (decimal)datos.Lector["Precio"];
-                aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
-
-                return aux;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-
         }
 
     }
