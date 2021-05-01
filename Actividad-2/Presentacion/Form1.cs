@@ -31,9 +31,18 @@ namespace Presentacion
 
         private void btnDetalle_Click(object sender, EventArgs e)
         {
-            Articulo nuevo = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            FormAgregar detalle = new FormAgregar("Detalle de Artículo", nuevo);
-            detalle.ShowDialog();
+            try
+            {
+                Articulo nuevo = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                FormAgregar detalle = new FormAgregar("Detalle de Artículo", nuevo);
+                detalle.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            
             
         }
 
@@ -42,11 +51,20 @@ namespace Presentacion
             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
 
-            if(MessageBox.Show("¿Estás seguro que querés eliminar el articulo?","Eliminar",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+            try
             {
-                articuloNegocio.eliminar(seleccionado.Id);
-                cargarGrilla();
+                if (MessageBox.Show("¿Estás seguro que querés eliminar el articulo?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    articuloNegocio.eliminar(seleccionado.Id);
+                    cargarGrilla();
+                }
             }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            
                 
         }
 
@@ -135,8 +153,18 @@ namespace Presentacion
         {
             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             FormAgregar modificar = new FormAgregar(seleccionado);
-            modificar.ShowDialog();
-            cargarGrilla();
+
+            try
+            {
+                modificar.ShowDialog();
+                cargarGrilla();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            
         }
     }
 }
