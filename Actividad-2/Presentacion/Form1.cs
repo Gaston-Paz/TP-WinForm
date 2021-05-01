@@ -125,6 +125,7 @@ namespace Presentacion
                 dgvArticulos.DataSource = null;
                 dgvArticulos.DataSource = listaArticulos;
             }
+            ocultarColumnas();
         }
     }
 }
