@@ -83,6 +83,7 @@ namespace Presentacion
             dgvArticulos.Columns["Id"].Visible = false;
             dgvArticulos.Columns["Descripcion"].Visible = false;
             dgvArticulos.Columns["UrlImagen"].Visible = false;
+            dgvArticulos.Columns["Precio"].Visible = false;
         }
 
         private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
