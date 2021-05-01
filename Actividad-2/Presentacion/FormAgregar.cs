@@ -14,17 +14,20 @@ namespace Presentacion
 {
     public partial class FormAgregar : Form
     {
+        private Articulo nuevo = null;
         public FormAgregar()
         {
             InitializeComponent();
         }
 
-        private void lblPrecio_Click(object sender, EventArgs e)
+        public FormAgregar(Articulo nuevo)
         {
-
+            InitializeComponent();
+            this.nuevo = nuevo;
+            Text = "Modificar Articulo";
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+       private void btnAgregar_Click(object sender, EventArgs e)
         {
             Articulo nuevo = new Articulo();
             ArticuloNegocio articuloNegrocio = new ArticuloNegocio();
@@ -61,6 +64,24 @@ namespace Presentacion
             {
                 cmbCategoria.DataSource = categoriaNegocio.listar();
                 cmbMarca.DataSource = marcaNegocio.listar();
+                cmbCategoria.ValueMember = "Id";
+                cmbCategoria.DisplayMember = "Nombre";
+                cmbMarca.ValueMember = "Id";
+                cmbMarca.DisplayMember = "Nombre";
+
+                if (nuevo != null)
+                {
+                    txtCodigo.Text = nuevo.Codigo;
+                    txtDescripcion.Text = nuevo.Descripcion;
+                    txtNombre.Text = nuevo.Nombre;
+                    txtPrecio.Text = nuevo.Precio.ToString();
+                    RecargarImg(nuevo.UrlImagen);
+                    cmbCategoria.Text = nuevo.TipoCategoria.Nombre;
+                    cmbMarca.Text = nuevo.TipoMarca.Nombre;
+                    txtUrlImagen.Text = nuevo.UrlImagen;
+                    cmbMarca.SelectedValue = nuevo.TipoMarca.Id;
+                    cmbCategoria.SelectedValue = nuevo.TipoCategoria.Id;
+                }
 
             }
             catch (Exception ex)

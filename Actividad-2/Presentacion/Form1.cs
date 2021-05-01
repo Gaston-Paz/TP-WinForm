@@ -29,11 +29,6 @@ namespace Presentacion
             cargarGrilla();
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnDetalle_Click(object sender, EventArgs e)
         {
 
@@ -125,6 +120,14 @@ namespace Presentacion
                 dgvArticulos.DataSource = listaArticulos;
             }
             ocultarColumnas();
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            FormAgregar modificar = new FormAgregar(seleccionado);
+            modificar.ShowDialog();
+            cargarGrilla();
         }
     }
 }

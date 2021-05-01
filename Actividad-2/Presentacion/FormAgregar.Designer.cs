@@ -111,7 +111,6 @@ namespace Presentacion
             this.lblPrecio.Size = new System.Drawing.Size(47, 16);
             this.lblPrecio.TabIndex = 5;
             this.lblPrecio.Text = "Precio";
-            this.lblPrecio.Click += new System.EventHandler(this.lblPrecio_Click);
             // 
             // txtCodigo
             // 
