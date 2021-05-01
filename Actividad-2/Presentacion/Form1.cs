@@ -36,7 +36,15 @@ namespace Presentacion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
 
+            if(MessageBox.Show("¿Estás seguro que querés eliminar el articulo?","Eliminar",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+                 {
+                articuloNegocio.eliminar(seleccionado.Id);
+                cargarGrilla();
+                }
+                
         }
 
         private void Form1_Load(object sender, EventArgs e)
