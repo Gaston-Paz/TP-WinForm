@@ -74,6 +74,7 @@ namespace Presentacion
 
         private void RecargarImg(string img)
         {
+            //Detalle mucho muy importante 1 imagen no carga y se rompe
             pbxArticulo.Load(img);
         }
 
@@ -85,6 +86,12 @@ namespace Presentacion
         }
 
         private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            RecargarImg(seleccionado.UrlImagen);
+        }
+
+        private void dgvArticulos_MouseClick(object sender, MouseEventArgs e)
         {
             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             RecargarImg(seleccionado.UrlImagen);
