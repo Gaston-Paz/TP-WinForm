@@ -95,8 +95,10 @@ namespace Presentacion
 
         private void RecargarImg(string img)
         {
-            //Detalle mucho muy importante 1 imagen no carga y se rompe
-            pbxArticulo.Load(img);
+            if (img != "")
+                pbxArticulo.Load(img);
+            else
+                pbxArticulo.ImageLocation = "\\error.jpg";
         }
 
         private void ocultarColumnas()
