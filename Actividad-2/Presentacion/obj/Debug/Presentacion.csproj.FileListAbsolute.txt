@@ -36,3 +36,4 @@ C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\
 C:\Users\Max\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.Marca_Categoria.resources
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.FormArticulo.resources
 C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\obj\Debug\Presentacion.Presentacion.resources
+C:\Users\Gastón\Documents\GitHub\TP-WinForm\Actividad-2\Presentacion\bin\Debug\FontAwesome.Sharp.dll

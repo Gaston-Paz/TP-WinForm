@@ -82,7 +82,7 @@ namespace Presentacion
                 listaArticulos = articuloNegocio.listar();
                 dgvArticulos.DataSource = listaArticulos;
 
-                ocultarColumnas();
+                //ocultarColumnas();
 
                 RecargarImg(listaArticulos[0].UrlImagen);
             }
@@ -146,7 +146,7 @@ namespace Presentacion
                 dgvArticulos.DataSource = null;
                 dgvArticulos.DataSource = listaArticulos;
             }
-            ocultarColumnas();
+            //ocultarColumnas();
         }
 
         private void btnModificar_Click_1(object sender, EventArgs e)

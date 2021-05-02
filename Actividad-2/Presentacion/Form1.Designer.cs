@@ -29,6 +29,8 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Presentacion));
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.txtBFiltrar = new System.Windows.Forms.TextBox();
@@ -38,8 +40,18 @@ namespace Presentacion
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
+            this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoMarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urlImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFiltrar
@@ -63,18 +75,30 @@ namespace Presentacion
             // 
             // dgvArticulos
             // 
-            this.dgvArticulos.AllowUserToAddRows = false;
-            this.dgvArticulos.AllowUserToDeleteRows = false;
+            this.dgvArticulos.AllowUserToResizeColumns = false;
             this.dgvArticulos.AllowUserToResizeRows = false;
+            this.dgvArticulos.AutoGenerateColumns = false;
             this.dgvArticulos.BackgroundColor = System.Drawing.Color.White;
             this.dgvArticulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.codigoDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.tipoMarcaDataGridViewTextBoxColumn,
+            this.tipoCategoriaDataGridViewTextBoxColumn,
+            this.urlImagenDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn});
+            this.dgvArticulos.DataSource = this.articuloBindingSource;
             this.dgvArticulos.GridColor = System.Drawing.Color.Black;
             this.dgvArticulos.Location = new System.Drawing.Point(12, 39);
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.ReadOnly = true;
+            this.dgvArticulos.RowHeadersWidth = 50;
+            this.dgvArticulos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvArticulos.Size = new System.Drawing.Size(498, 287);
+            this.dgvArticulos.StandardTab = true;
             this.dgvArticulos.TabIndex = 3;
             this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
             this.dgvArticulos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvArticulos_MouseClick);
@@ -142,6 +166,66 @@ namespace Presentacion
             this.pbxArticulo.TabIndex = 8;
             this.pbxArticulo.TabStop = false;
             // 
+            // articuloBindingSource
+            // 
+            this.articuloBindingSource.DataSource = typeof(Dominio.Articulo);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tipoMarcaDataGridViewTextBoxColumn
+            // 
+            this.tipoMarcaDataGridViewTextBoxColumn.DataPropertyName = "TipoMarca";
+            this.tipoMarcaDataGridViewTextBoxColumn.HeaderText = "TipoMarca";
+            this.tipoMarcaDataGridViewTextBoxColumn.Name = "tipoMarcaDataGridViewTextBoxColumn";
+            // 
+            // tipoCategoriaDataGridViewTextBoxColumn
+            // 
+            this.tipoCategoriaDataGridViewTextBoxColumn.DataPropertyName = "TipoCategoria";
+            this.tipoCategoriaDataGridViewTextBoxColumn.HeaderText = "TipoCategoria";
+            this.tipoCategoriaDataGridViewTextBoxColumn.Name = "tipoCategoriaDataGridViewTextBoxColumn";
+            // 
+            // urlImagenDataGridViewTextBoxColumn
+            // 
+            this.urlImagenDataGridViewTextBoxColumn.DataPropertyName = "UrlImagen";
+            this.urlImagenDataGridViewTextBoxColumn.HeaderText = "UrlImagen";
+            this.urlImagenDataGridViewTextBoxColumn.Name = "urlImagenDataGridViewTextBoxColumn";
+            this.urlImagenDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.precioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            // 
             // Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +248,7 @@ namespace Presentacion
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,6 +264,15 @@ namespace Presentacion
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.PictureBox pbxArticulo;
+        private System.Windows.Forms.BindingSource articuloBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoMarcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoCategoriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urlImagenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
     }
 }
 
