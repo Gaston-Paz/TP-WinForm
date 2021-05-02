@@ -52,6 +52,33 @@ namespace Presentacion
 
             Close();
         }
-   
+
+        private void validar()
+        {
+            btnGuardar.Enabled = (txtNombre.BackColor != Color.Red);
+        }
+
+        private void txtNombre_Validating(object sender, CancelEventArgs e)
+        {
+            if(txtNombre.Text.Length == 0)
+            {
+                txtNombre.BackColor = Color.Red;
+            }
+            else
+            {
+                txtNombre.BackColor = System.Drawing.SystemColors.Window;
+            }
+            validar();
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(txtNombre.Text.Length > 0)
+            {
+                txtNombre.BackColor = Color.White;
+                btnGuardar.Enabled = true;
+            }
+
+        }
     }
 }
