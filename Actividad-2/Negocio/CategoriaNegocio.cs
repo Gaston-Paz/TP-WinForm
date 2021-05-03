@@ -13,6 +13,7 @@ namespace Negocio
         {
             List<Categoria> lista = new List<Categoria>();
             AccesoDatos datos = new AccesoDatos();
+            
 
             try
             {
@@ -36,6 +37,7 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+        
         public void agregarCategoria(Categoria nuevo)
         {
             AccesoDatos datos = new AccesoDatos();

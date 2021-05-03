@@ -33,19 +33,22 @@ namespace Presentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if(Text == "Agregar Categoria")
+            string texto = txtNombre.Text.Trim();
+            
+            if (Text == "Agregar Categoria")
             {
                 CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
-                Categoria nuevo = new Categoria(txtNombre.Text);
+                Categoria nuevo = new Categoria(texto);
                 categoriaNegocio.agregarCategoria(nuevo);
                                 
             }
             else if (Text == "Agregar Marca")
             {
                 MarcaNegocio marcaNegocio = new MarcaNegocio();
-                Marca nuevo = new Marca(txtNombre.Text);
+                Marca nuevo = new Marca(texto);
                 marcaNegocio.agregarMarca(nuevo);
             }
+
 
             MessageBox.Show("Guardado con éxito");
             
@@ -53,14 +56,10 @@ namespace Presentacion
             Close();
         }
 
-        private void validar()
-        {
-            btnGuardar.Enabled = (txtNombre.BackColor != Color.Red);
-        }
-
         private void txtNombre_Validating(object sender, CancelEventArgs e)
         {
-            if(txtNombre.Text.Length == 0)
+            string texto = txtNombre.Text.Trim();
+            if (texto.Length == 0)
             {
                 txtNombre.BackColor = Color.Red;
             }
@@ -68,7 +67,8 @@ namespace Presentacion
             {
                 txtNombre.BackColor = System.Drawing.SystemColors.Window;
             }
-            validar();
+
+            btnGuardar.Enabled = (txtNombre.BackColor != Color.Red);
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)

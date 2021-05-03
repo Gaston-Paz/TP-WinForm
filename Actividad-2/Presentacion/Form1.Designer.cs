@@ -35,12 +35,6 @@ namespace Presentacion
             this.lblFiltrar = new System.Windows.Forms.Label();
             this.txtBFiltrar = new System.Windows.Forms.TextBox();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnDetalle = new System.Windows.Forms.Button();
-            this.pbxArticulo = new System.Windows.Forms.PictureBox();
-            this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +43,15 @@ namespace Presentacion
             this.tipoCategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urlImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.articuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnDetalle = new System.Windows.Forms.Button();
+            this.pbxArticulo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFiltrar
@@ -97,11 +97,72 @@ namespace Presentacion
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersWidth = 50;
             this.dgvArticulos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(498, 287);
             this.dgvArticulos.StandardTab = true;
             this.dgvArticulos.TabIndex = 3;
             this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
             this.dgvArticulos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvArticulos_MouseClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tipoMarcaDataGridViewTextBoxColumn
+            // 
+            this.tipoMarcaDataGridViewTextBoxColumn.DataPropertyName = "TipoMarca";
+            this.tipoMarcaDataGridViewTextBoxColumn.HeaderText = "TipoMarca";
+            this.tipoMarcaDataGridViewTextBoxColumn.Name = "tipoMarcaDataGridViewTextBoxColumn";
+            // 
+            // tipoCategoriaDataGridViewTextBoxColumn
+            // 
+            this.tipoCategoriaDataGridViewTextBoxColumn.DataPropertyName = "TipoCategoria";
+            this.tipoCategoriaDataGridViewTextBoxColumn.HeaderText = "TipoCategoria";
+            this.tipoCategoriaDataGridViewTextBoxColumn.Name = "tipoCategoriaDataGridViewTextBoxColumn";
+            // 
+            // urlImagenDataGridViewTextBoxColumn
+            // 
+            this.urlImagenDataGridViewTextBoxColumn.DataPropertyName = "UrlImagen";
+            this.urlImagenDataGridViewTextBoxColumn.HeaderText = "UrlImagen";
+            this.urlImagenDataGridViewTextBoxColumn.Name = "urlImagenDataGridViewTextBoxColumn";
+            this.urlImagenDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.precioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            // 
+            // articuloBindingSource
+            // 
+            this.articuloBindingSource.DataSource = typeof(Dominio.Articulo);
             // 
             // btnAgregar
             // 
@@ -166,66 +227,6 @@ namespace Presentacion
             this.pbxArticulo.TabIndex = 8;
             this.pbxArticulo.TabStop = false;
             // 
-            // articuloBindingSource
-            // 
-            this.articuloBindingSource.DataSource = typeof(Dominio.Articulo);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            this.codigoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // tipoMarcaDataGridViewTextBoxColumn
-            // 
-            this.tipoMarcaDataGridViewTextBoxColumn.DataPropertyName = "TipoMarca";
-            this.tipoMarcaDataGridViewTextBoxColumn.HeaderText = "TipoMarca";
-            this.tipoMarcaDataGridViewTextBoxColumn.Name = "tipoMarcaDataGridViewTextBoxColumn";
-            // 
-            // tipoCategoriaDataGridViewTextBoxColumn
-            // 
-            this.tipoCategoriaDataGridViewTextBoxColumn.DataPropertyName = "TipoCategoria";
-            this.tipoCategoriaDataGridViewTextBoxColumn.HeaderText = "TipoCategoria";
-            this.tipoCategoriaDataGridViewTextBoxColumn.Name = "tipoCategoriaDataGridViewTextBoxColumn";
-            // 
-            // urlImagenDataGridViewTextBoxColumn
-            // 
-            this.urlImagenDataGridViewTextBoxColumn.DataPropertyName = "UrlImagen";
-            this.urlImagenDataGridViewTextBoxColumn.HeaderText = "UrlImagen";
-            this.urlImagenDataGridViewTextBoxColumn.Name = "urlImagenDataGridViewTextBoxColumn";
-            this.urlImagenDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.precioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            // 
             // Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,8 +248,8 @@ namespace Presentacion
             this.Text = "ABM Artículos";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.articuloBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

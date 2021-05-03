@@ -119,6 +119,7 @@ namespace Presentacion
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(256, 20);
             this.txtCodigo.TabIndex = 6;
+            this.txtCodigo.Validating += new System.ComponentModel.CancelEventHandler(this.txtCodigo_Validating);
             // 
             // txtNombre
             // 
@@ -127,6 +128,7 @@ namespace Presentacion
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(256, 20);
             this.txtNombre.TabIndex = 7;
+            this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
             // 
             // txtDescripcion
             // 

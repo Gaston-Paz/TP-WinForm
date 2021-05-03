@@ -13,6 +13,7 @@ namespace Negocio
         {
             List<Marca> lista = new List<Marca>();
             AccesoDatos datos = new AccesoDatos();
+            
 
             try
             {
@@ -36,7 +37,7 @@ namespace Negocio
             }
         }
     
-    public void agregarMarca(Marca nuevo)
+        public void agregarMarca(Marca nuevo)
     {
         AccesoDatos datos = new AccesoDatos();
 

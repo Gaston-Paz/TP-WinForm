@@ -57,8 +57,8 @@ namespace Presentacion
                 if(nuevo == null)
                     nuevo = new Articulo();
 
-                nuevo.Codigo = txtCodigo.Text;
-                nuevo.Nombre = txtNombre.Text;
+                nuevo.Codigo = txtCodigo.Text.Trim();
+                nuevo.Nombre = txtNombre.Text.Trim();
                 nuevo.Descripcion = txtDescripcion.Text;              
                 nuevo.TipoMarca = (Marca)cmbMarca.SelectedItem;
                 nuevo.TipoCategoria = (Categoria)cmbCategoria.SelectedItem;
@@ -93,8 +93,10 @@ namespace Presentacion
 
             try
             {
+                txtPrecio.Text = "0.00";
                 cmbCategoria.DataSource = categoriaNegocio.listar();
                 cmbMarca.DataSource = marcaNegocio.listar();
+
                 cmbCategoria.ValueMember = "Id";
                 cmbCategoria.DisplayMember = "Nombre";
                 cmbMarca.ValueMember = "Id";
@@ -155,10 +157,10 @@ namespace Presentacion
             {
                 pbAgregar.Load(img);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                MessageBox.Show(ex.ToString());
+                pbAgregar.ImageLocation = "\\error.jpg";
             }
             
         }
@@ -185,5 +187,39 @@ namespace Presentacion
             cmbCategoria.DataSource = categoriaNegocio.listar();
 
         }
+
+        private void txtCodigo_Validating(object sender, CancelEventArgs e)
+        {
+            string texto = txtCodigo.Text.Trim();
+
+            if (texto.Length == 0)
+            {
+                txtCodigo.BackColor = Color.Red;
+            }
+            else
+            {
+                txtCodigo.BackColor = System.Drawing.SystemColors.Window;
+            }
+
+            btnAgregar.Enabled = (txtCodigo.BackColor != Color.Red);
+        }
+
+        private void txtNombre_Validating(object sender, CancelEventArgs e)
+        {
+           string texto = txtNombre.Text.Trim();
+
+            if (texto.Length == 0)
+            {
+                txtNombre.BackColor = Color.Red;
+            }
+            else
+            {
+                txtNombre.BackColor = System.Drawing.SystemColors.Window;
+            }
+
+            btnAgregar.Enabled = (txtNombre.BackColor != Color.Red);
+        }
+
+
     }
 }

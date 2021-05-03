@@ -21,7 +21,6 @@ namespace Presentacion
             InitializeComponent();
         }
 
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FormArticulo formAgregar = new FormArticulo();
@@ -99,7 +98,7 @@ namespace Presentacion
             {
                 pbxArticulo.Load(img);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 pbxArticulo.ImageLocation = "\\error.jpg";
