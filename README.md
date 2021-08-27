@@ -1,7 +1,7 @@
 # ABM de productos
 
 Aplicación de escritorio - creado en Prog-3 para UTN - FRGP - Tecnicatura Universitaria en Programación.
-Se creo utilizando C# en .Net FrameWork y SQL Server.
+Se creo utilizando C# en .Net Framework y SQL Server.
 Permite la alta, baja y edición de productos, marcas y categorias.
 
 ### Tecnología implementada:
